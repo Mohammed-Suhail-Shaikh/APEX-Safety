@@ -1,0 +1,18 @@
+node_modules/
+dist/
+build/
+.cache/
+.env
+.env.local
+.env.*.local
+.vite/
+vite.config.*.timestamp-*
+*.tsbuildinfo
+*.log
+.DS_Store
+Thumbs.db
+
+# Figma export archive (optional local reference)
+Figma Code/node_modules/
+Figma Code/dist/
+Figma Code/.figma/
