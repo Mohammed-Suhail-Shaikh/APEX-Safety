@@ -51,7 +51,7 @@ export function Services() {
                   i < SERVICE_CATEGORIES.length - 1 ? 'lg:border-r' : ''
                 } ${i === 0 ? 'lg:pl-0' : ''} ${i === SERVICE_CATEGORIES.length - 1 ? 'lg:pr-0' : ''}`}
               >
-                <div className="mb-1.5 font-heading text-2xl leading-none font-bold tracking-[-0.04em] text-border sm:mb-2 sm:text-4xl">
+                <div className="mb-1.5 font-heading text-2xl leading-none font-bold tracking-[-0.04em] text-green italic sm:mb-2 sm:text-4xl">
                   {cat.number}
                 </div>
                 <h3 className="mb-1.5 font-heading text-[15px] font-bold tracking-[-0.01em] text-foreground sm:mb-3 sm:text-lg">
