@@ -12,9 +12,9 @@ import { Footer } from '@/components/Footer'
 
 export default function App() {
   return (
-    <div className="bg-white">
+    <div className="min-w-0 overflow-x-hidden bg-white">
       <Nav />
-      <main>
+      <main className="min-w-0">
         <Hero />
         <CredentialsBar />
         <WhySafety />

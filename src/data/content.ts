@@ -2,8 +2,8 @@ export const IMG_HERO =
   'https://images.unsplash.com/photo-1730584474428-83f3cfc20a73?w=1600&h=1000&fit=crop&auto=format'
 export const IMG_CONSTRUCTION =
   'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&h=540&fit=crop&auto=format'
-export const IMG_AUDIT =
-  'https://images.unsplash.com/photo-1760970237216-17a474403b5c?w=800&h=540&fit=crop&auto=format'
+export const IMG_INDUSTRY =
+  'https://images.unsplash.com/photo-1565793298595-6a879b1d9492?w=1000&h=1200&fit=crop&auto=format'
 
 export const NAV_LINKS = [
   { label: 'Services', href: '#services' },
@@ -156,10 +156,15 @@ export const FAQS = [
   },
 ] as const
 
-export const CONTACT_DETAILS = [
-  { label: 'Email', value: 'info@apexsafetyconsultants.com' },
-  { label: 'Phone', value: '+1 (555) 000-0000' },
-  { label: 'Response time', value: 'Within 1 business day' },
+export const CONTACT_EMAIL = 'info@apexsafetyconsultants.com'
+
+/**
+ * Regional phone numbers shown under Contact → Phone.
+ * Add another entry to expand to more countries, e.g.:
+ * { country: 'United States', number: '+1 …', href: 'tel:+1…' }
+ */
+export const CONTACT_PHONES = [
+  { country: 'India', number: '+91 00000 00000', href: 'tel:+910000000000' },
 ] as const
 
 export const FOOTER_COLUMNS = [
@@ -187,7 +192,7 @@ export const FOOTER_COLUMNS = [
     heading: 'Contact',
     links: [
       { label: 'info@apexsafetyconsultants.com', href: 'mailto:info@apexsafetyconsultants.com' },
-      { label: '+1 (555) 000-0000', href: 'tel:+15550000000' },
+      { label: 'India: +91 00000 00000', href: 'tel:+910000000000' },
       { label: 'Mon–Fri, 8am–6pm', href: '#contact' },
     ],
   },

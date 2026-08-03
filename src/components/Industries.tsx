@@ -1,47 +1,46 @@
-import { IMG_AUDIT, INDUSTRIES } from '@/data/content'
+import { IMG_INDUSTRY, INDUSTRIES } from '@/data/content'
 import { Reveal } from '@/components/Reveal'
 
 export function Industries() {
   return (
-    <section id="industries" className="border-t border-border bg-white px-5 py-20 lg:px-10">
-      <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-16 lg:grid-cols-2">
+    <section id="industries" className="section-pad border-t border-border bg-white">
+      <div className="page-shell grid grid-cols-1 items-center gap-8 sm:gap-10 lg:grid-cols-2 lg:gap-16">
         <Reveal>
-          <p className="mb-4 font-heading text-xs font-bold tracking-widest text-label uppercase">
+          <p className="mb-3 font-heading text-xs font-bold tracking-widest text-label uppercase">
             Industries Served
           </p>
-          <h2 className="mb-6 text-3xl leading-[1.15] font-bold tracking-[-0.02em] text-foreground lg:text-4xl">
-            We understand
-            <br />
-            your industry.
+          <h2 className="mb-4 text-[1.65rem] leading-[1.2] font-bold tracking-[-0.02em] text-foreground sm:mb-6 sm:text-3xl sm:leading-[1.15] lg:text-4xl">
+            We understand your industry.
           </h2>
-          <p className="mb-8 text-base leading-[1.8] text-body">
+          <p className="mb-6 text-[15px] leading-[1.7] text-body sm:mb-8 sm:text-base sm:leading-[1.8]">
             Our consultants are trained across a range of high-risk sectors. You won&apos;t need to
             explain your operations from scratch — we arrive with working knowledge of your
             regulatory environment and operational risks.
           </p>
 
-          <div className="grid grid-cols-1 gap-x-8 sm:grid-cols-2">
+          <div className="grid grid-cols-1 gap-x-6 min-[380px]:grid-cols-2 sm:gap-x-8">
             {INDUSTRIES.map((ind) => (
               <div
                 key={ind}
-                className="flex items-center gap-2 border-b border-border py-3 text-sm text-[#374151]"
+                className="flex items-center gap-2 border-b border-border py-2.5 text-[13px] text-[#374151] sm:py-3 sm:text-sm"
               >
                 <span className="text-[10px] text-green" aria-hidden="true">
                   ●
                 </span>
-                {ind}
+                <span className="min-w-0">{ind}</span>
               </div>
             ))}
           </div>
         </Reveal>
 
-        <Reveal delayMs={120}>
+        <div className="relative aspect-[4/3] w-full overflow-hidden bg-surface sm:aspect-[5/4] lg:aspect-auto lg:min-h-[480px]">
           <img
-            src={IMG_AUDIT}
-            alt="Safety professional conducting site inspection"
-            className="h-[480px] w-full object-cover object-center"
+            src={IMG_INDUSTRY}
+            alt="Industrial manufacturing floor"
+            className="absolute inset-0 h-full w-full object-cover object-center"
+            loading="lazy"
           />
-        </Reveal>
+        </div>
       </div>
     </section>
   )

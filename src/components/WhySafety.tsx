@@ -8,46 +8,46 @@ const STATS = [
 
 export function WhySafety() {
   return (
-    <section className="bg-white px-5 py-20 lg:px-10">
-      <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-16 lg:grid-cols-2">
+    <section className="section-pad bg-white">
+      <div className="page-shell grid grid-cols-1 items-center gap-8 sm:gap-10 lg:grid-cols-2 lg:gap-16">
         <Reveal>
-          <p className="mb-4 font-heading text-xs font-bold tracking-widest text-label uppercase">
+          <p className="mb-3 font-heading text-xs font-bold tracking-widest text-label uppercase">
             Why It Matters
           </p>
-          <h2 className="mb-6 text-3xl leading-[1.15] font-bold tracking-[-0.02em] text-foreground lg:text-4xl">
-            Workplace incidents are preventable.
-            <br />
+          <h2 className="mb-4 text-[1.65rem] leading-[1.2] font-bold tracking-[-0.02em] text-foreground sm:mb-6 sm:text-3xl sm:leading-[1.15] lg:text-4xl">
+            Workplace incidents are preventable.{' '}
             <span className="text-green">Most businesses don&apos;t know where to start.</span>
           </h2>
-          <p className="mb-6 text-base leading-[1.8] text-body">
+          <p className="mb-4 text-[15px] leading-[1.7] text-body sm:mb-6 sm:text-base sm:leading-[1.8]">
             Many organizations want to do safety right but don&apos;t have in-house EHS expertise.
             They rely on outdated procedures, react to incidents instead of preventing them, and
             struggle to keep up with changing regulations.
           </p>
-          <p className="mb-8 text-base leading-[1.8] text-body">
+          <p className="mb-6 text-[15px] leading-[1.7] text-body sm:mb-8 sm:text-base sm:leading-[1.8]">
             APEX was founded to close that gap — providing the same quality of safety management
             guidance that large corporates access, scaled and priced appropriately for organizations
             at every stage.
           </p>
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-2 gap-3 sm:gap-4">
             {STATS.map((item) => (
-              <div key={item.stat} className="border-l-[3px] border-green bg-surface p-5">
-                <div className="mb-1 font-heading text-2xl font-bold tracking-[-0.02em] text-green">
+              <div key={item.stat} className="border-l-[3px] border-green bg-surface p-3.5 sm:p-5">
+                <div className="mb-1 font-heading text-xl font-bold tracking-[-0.02em] text-green sm:text-2xl">
                   {item.stat}
                 </div>
-                <div className="text-xs leading-snug text-body">{item.label}</div>
+                <div className="text-[11px] leading-snug text-body sm:text-xs">{item.label}</div>
               </div>
             ))}
           </div>
         </Reveal>
 
-        <Reveal delayMs={120}>
+        <div className="relative aspect-[4/3] w-full overflow-hidden bg-surface sm:aspect-auto sm:h-[360px] lg:h-[420px]">
           <img
             src={IMG_CONSTRUCTION}
             alt="Workers on construction site"
-            className="h-[420px] w-full object-cover"
+            className="absolute inset-0 h-full w-full object-cover"
+            loading="lazy"
           />
-        </Reveal>
+        </div>
       </div>
     </section>
   )

@@ -13,24 +13,40 @@ export function Reveal({ children, className = '', delayMs = 0 }: RevealProps) {
     const el = ref.current
     if (!el) return
 
-    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-    if (prefersReduced) {
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    const isMobile = window.matchMedia('(max-width: 767px)').matches
+
+    // Skip animation on mobile — keeps layout filled and avoids blank opacity:0 states
+    if (reduceMotion || isMobile) {
       el.classList.add('is-visible')
       return
+    }
+
+    const show = () => {
+      el.classList.add('is-visible')
     }
 
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry?.isIntersecting) {
-          el.classList.add('is-visible')
+          show()
           observer.unobserve(el)
         }
       },
-      { threshold: 0.12, rootMargin: '0px 0px -40px 0px' },
+      { threshold: 0.05, rootMargin: '0px 0px -8% 0px' },
     )
 
     observer.observe(el)
-    return () => observer.disconnect()
+
+    // Failsafe if observer never fires
+    const timer = window.setTimeout(() => {
+      if (!el.classList.contains('is-visible')) show()
+    }, 1200)
+
+    return () => {
+      observer.disconnect()
+      window.clearTimeout(timer)
+    }
   }, [])
 
   return (

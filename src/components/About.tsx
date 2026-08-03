@@ -4,39 +4,41 @@ import { Reveal } from '@/components/Reveal'
 
 export function About() {
   return (
-    <section id="about" className="border-t border-border bg-surface-alt px-5 py-20 lg:px-10">
-      <div className="mx-auto max-w-7xl">
-        <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
+    <section id="about" className="section-pad border-t border-border bg-surface-alt">
+      <div className="page-shell">
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:gap-12">
           <Reveal className="lg:col-span-5">
-            <p className="mb-4 font-heading text-xs font-bold tracking-widest text-label uppercase">
+            <p className="mb-3 font-heading text-xs font-bold tracking-widest text-label uppercase">
               About APEX
             </p>
-            <h2 className="mb-6 text-3xl leading-[1.15] font-bold tracking-[-0.02em] text-foreground lg:text-4xl">
+            <h2 className="mb-4 text-[1.65rem] leading-[1.2] font-bold tracking-[-0.02em] text-foreground sm:mb-6 sm:text-3xl sm:leading-[1.15] lg:text-4xl">
               New company.
               <br />
               <span className="text-green">Experienced practitioners.</span>
             </h2>
-            <p className="mb-5 text-base leading-[1.8] text-body">
-              APEX Safety Consultants is a newly established consultancy, but our consultants are
-              not new to safety. We bring hands-on EHS field experience from years of working within
-              high-risk industries — now channelled into independent practice.
-            </p>
-            <p className="mb-5 text-base leading-[1.8] text-body">
-              We started APEX because we saw a gap: too many organizations — especially small and
-              mid-sized ones — couldn&apos;t access quality safety expertise without paying
-              enterprise consulting rates. We&apos;re here to change that.
-            </p>
-            <p className="text-base leading-[1.8] text-body">
-              Our work is always independent and commercially unbiased. We have no products to sell
-              you. Our only interest is helping you build a safer workplace.
-            </p>
+            <div className="space-y-4 text-[15px] leading-[1.7] text-body sm:space-y-5 sm:text-base sm:leading-[1.8]">
+              <p>
+                APEX Safety Consultants is a newly established consultancy, but our consultants are
+                not new to safety. We bring hands-on EHS field experience from years of working
+                within high-risk industries — now channelled into independent practice.
+              </p>
+              <p>
+                We started APEX because we saw a gap: too many organizations — especially small and
+                mid-sized ones — couldn&apos;t access quality safety expertise without paying
+                enterprise consulting rates. We&apos;re here to change that.
+              </p>
+              <p>
+                Our work is always independent and commercially unbiased. We have no products to
+                sell you. Our only interest is helping you build a safer workplace.
+              </p>
+            </div>
           </Reveal>
 
           <div className="grid content-start grid-cols-1 gap-0 sm:grid-cols-2 lg:col-span-7">
             {ABOUT_VALUES.map((item, i) => (
               <Reveal key={item.title} delayMs={i * 60}>
                 <div
-                  className={`border-t border-border py-6 sm:px-6 ${
+                  className={`border-t border-border py-5 sm:px-5 sm:py-6 lg:px-6 ${
                     i % 2 === 0 ? 'sm:border-r sm:pl-0' : 'sm:pr-0'
                   }`}
                 >
@@ -44,19 +46,21 @@ export function About() {
                   <h4 className="mb-2 font-heading text-sm font-bold text-foreground">
                     {item.title}
                   </h4>
-                  <p className="text-sm leading-[1.7] text-muted-foreground">{item.body}</p>
+                  <p className="text-sm leading-[1.65] text-muted-foreground sm:leading-[1.7]">
+                    {item.body}
+                  </p>
                 </div>
               </Reveal>
             ))}
 
             <Reveal delayMs={240} className="sm:col-span-2">
-              <div className="mt-2 flex items-center gap-5 border border-green-soft-border bg-green-soft p-6">
+              <div className="mt-1 flex flex-col items-start gap-3 border border-green-soft-border bg-green-soft p-4 sm:mt-2 sm:flex-row sm:items-center sm:gap-5 sm:p-6">
                 <img
                   src={apexIcon}
                   alt="APEX Safety Consultants"
-                  className="h-12 w-12 shrink-0 object-contain"
+                  className="h-9 w-9 shrink-0 object-contain sm:h-12 sm:w-12"
                 />
-                <p className="text-sm leading-[1.7] text-green">
+                <p className="text-sm leading-[1.65] text-green sm:leading-[1.7]">
                   <strong>Ready to talk?</strong> We offer a no-obligation discovery conversation to
                   understand your situation and tell you honestly whether we can help.{' '}
                   <a href="#contact" className="font-semibold underline underline-offset-2">
