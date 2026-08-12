@@ -1,4 +1,5 @@
 import apexFooterLogo from '@/assets/apex-footer-logo.png'
+import eymenLogo from '@/assets/eymen-logo.png'
 import { FOOTER_COLUMNS } from '@/data/content'
 
 export function Footer() {
@@ -59,11 +60,26 @@ export function Footer() {
           ))}
         </div>
 
-        <div className="flex flex-col items-start justify-between gap-3 border-t border-white/[0.07] pt-6 sm:gap-4 sm:pt-8 md:flex-row md:items-center">
-          <p className="text-[11px] text-white/20 sm:text-xs">
+        <div className="flex flex-col items-center gap-5 border-t border-white/[0.07] pt-7 text-center sm:gap-6 sm:pt-8 md:grid md:grid-cols-3 md:items-center md:gap-5 md:text-left">
+          <p className="order-2 text-[11px] text-white/20 md:order-1 md:justify-self-start sm:text-xs">
             © 2026 APEX Safety Consultancy. All rights reserved.
           </p>
-          <div className="flex flex-wrap gap-x-5 gap-y-2">
+
+          <div className="order-1 flex max-w-full flex-wrap items-center justify-center gap-x-2.5 gap-y-2 md:order-2">
+            <span className="font-heading text-[11px] font-semibold tracking-[0.08em] text-white/40 uppercase sm:text-sm">
+              Subsidiary of
+            </span>
+            <img
+              src={eymenLogo}
+              alt="Eymen Groups"
+              className="h-10 w-auto max-w-[min(180px,46vw)] object-contain sm:h-14 sm:max-w-none"
+            />
+            <span className="font-heading text-[11px] font-semibold tracking-[0.08em] text-white/40 uppercase sm:text-sm">
+              Groups
+            </span>
+          </div>
+
+          <div className="order-3 flex flex-wrap justify-center gap-x-5 gap-y-2 md:justify-self-end md:justify-end">
             {['Privacy Policy', 'Terms of Service'].map((l) => (
               <a
                 key={l}
