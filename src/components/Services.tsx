@@ -27,13 +27,13 @@ export function Services() {
             <p className="mb-3 font-heading text-[11px] font-bold tracking-widest text-label uppercase sm:mb-6 sm:text-xs">
               All Services
             </p>
-            <div className="grid grid-cols-1 gap-x-4 gap-y-2 min-[360px]:grid-cols-2 sm:gap-x-8 sm:gap-y-3 lg:grid-cols-3">
+            <div className="grid grid-cols-1 gap-x-6 gap-y-2 sm:grid-cols-2 sm:gap-x-8 sm:gap-y-3 lg:grid-cols-3">
               {SERVICES_LIST.map((s) => (
                 <div
                   key={s}
-                  className="flex items-start gap-1.5 text-[12px] leading-snug text-[#374151] sm:gap-2 sm:text-sm sm:leading-normal"
+                  className="flex items-start gap-2 text-[13px] leading-snug text-[#374151] sm:text-sm sm:leading-normal"
                 >
-                  <span className="mt-[2px] text-[9px] text-green sm:mt-[3px] sm:text-[10px]" aria-hidden="true">
+                  <span className="mt-[3px] text-[9px] text-green sm:text-[10px]" aria-hidden="true">
                     →
                   </span>
                   <span className="min-w-0">{s}</span>
@@ -47,27 +47,27 @@ export function Services() {
           {SERVICE_CATEGORIES.map((cat, i) => (
             <Reveal key={cat.title} delayMs={i * 80}>
               <div
-                className={`flex h-full flex-col border-b border-border py-4 sm:py-8 lg:border-b-0 lg:px-8 lg:py-10 ${
+                className={`flex h-full flex-col border-b border-border py-5 sm:py-8 lg:border-b-0 lg:px-8 lg:py-10 ${
                   i < SERVICE_CATEGORIES.length - 1 ? 'lg:border-r' : ''
                 } ${i === 0 ? 'lg:pl-0' : ''} ${i === SERVICE_CATEGORIES.length - 1 ? 'lg:pr-0' : ''}`}
               >
                 <div className="mb-1.5 font-heading text-2xl leading-none font-bold tracking-[-0.04em] text-green italic sm:mb-2 sm:text-4xl">
                   {cat.number}
                 </div>
-                <h3 className="mb-1.5 font-heading text-[15px] font-bold tracking-[-0.01em] text-foreground sm:mb-3 sm:text-lg">
+                <h3 className="mb-1.5 font-heading text-base font-bold tracking-[-0.01em] text-foreground sm:mb-3 sm:text-lg">
                   {cat.title}
                 </h3>
-                <p className="mb-3 text-[13px] leading-[1.6] text-muted-foreground sm:mb-6 sm:text-sm sm:leading-[1.75]">
+                <p className="mb-3.5 text-[13px] leading-[1.65] text-muted-foreground sm:mb-6 sm:text-sm sm:leading-[1.75]">
                   {cat.desc}
                 </p>
                 <ul className="mt-auto flex flex-col gap-1.5 sm:gap-2">
                   {cat.items.map((item) => (
                     <li
                       key={item}
-                      className="flex items-start gap-1.5 text-[12px] leading-snug text-[#374151] sm:gap-2 sm:text-sm sm:leading-normal"
+                      className="flex items-start gap-2 text-[13px] leading-snug text-[#374151] sm:text-sm sm:leading-normal"
                     >
                       <span
-                        className="mt-[2px] shrink-0 text-[9px] text-green sm:mt-[3px] sm:text-[10px]"
+                        className="mt-[3px] shrink-0 text-[9px] text-green sm:text-[10px]"
                         aria-hidden="true"
                       >
                         →

@@ -18,11 +18,11 @@ export function Industries() {
             regulatory environment and operational risks.
           </p>
 
-          <div className="grid grid-cols-1 gap-x-6 min-[380px]:grid-cols-2 sm:gap-x-8">
+          <div className="grid grid-cols-1 gap-x-6 min-[400px]:grid-cols-2 sm:gap-x-8">
             {INDUSTRIES.map((ind) => (
               <div
                 key={ind}
-                className="flex items-center gap-2 border-b border-border py-2.5 text-[13px] text-[#374151] sm:py-3 sm:text-sm"
+                className="flex items-center gap-2.5 border-b border-border py-3 text-[14px] text-[#374151] sm:py-3 sm:text-sm"
               >
                 <span className="text-[10px] text-green" aria-hidden="true">
                   ●

@@ -156,14 +156,14 @@ export function Contact() {
             </div>
           ) : (
             <form
-              className="relative flex w-full min-w-0 flex-col gap-2.5 border border-border bg-white p-3.5 sm:gap-4 sm:p-8"
+              className="relative flex w-full min-w-0 flex-col gap-3 border border-border bg-white p-4 sm:gap-4 sm:p-8"
               onSubmit={onSubmit}
             >
               <p className="font-heading text-[11px] font-bold tracking-widest text-green uppercase sm:mb-2 sm:text-xs">
                 Free Consultation Request
               </p>
 
-              <div className="grid grid-cols-2 gap-2.5 sm:gap-4">
+              <div className="grid grid-cols-1 gap-2.5 min-[420px]:grid-cols-2 sm:gap-4">
                 <FormInput
                   label="First Name"
                   name="firstName"
@@ -241,7 +241,7 @@ export function Contact() {
               <button
                 type="submit"
                 disabled={busy}
-                className="mt-0.5 w-full bg-green py-3 font-heading text-[13px] font-bold tracking-[0.04em] text-white transition-opacity hover:opacity-85 disabled:cursor-not-allowed disabled:opacity-60 sm:mt-1 sm:py-3.5 sm:text-sm"
+                className="mt-0.5 min-h-12 w-full bg-green py-3.5 font-heading text-[13px] font-bold tracking-[0.04em] text-white transition-opacity hover:opacity-85 disabled:cursor-not-allowed disabled:opacity-60 sm:mt-1 sm:min-h-0 sm:py-3.5 sm:text-sm"
               >
                 {busy ? 'SENDING…' : 'SEND MESSAGE'}
               </button>

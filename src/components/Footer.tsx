@@ -1,18 +1,18 @@
-import apexIcon from '@/assets/apex-icon.png'
+import apexFooterLogo from '@/assets/apex-footer-logo.png'
 import { FOOTER_COLUMNS } from '@/data/content'
 
 export function Footer() {
   return (
     <footer className="bg-foreground pb-[env(safe-area-inset-bottom)]">
       <div className="border-b border-white/[0.07]">
-        <div className="page-shell flex flex-col items-stretch justify-between gap-4 py-6 sm:gap-5 sm:py-8 md:flex-row md:items-center">
-          <p className="text-sm leading-relaxed text-white/55">
-            <span className="font-semibold text-white">Ready to build a safer workplace?</span>{' '}
-            We&apos;re just a conversation away.
+        <div className="page-shell flex flex-col items-stretch justify-between gap-3.5 py-5 sm:gap-5 sm:py-8 md:flex-row md:items-center">
+          <p className="text-[13px] leading-relaxed text-white/55 sm:text-sm">
+            <span className="font-semibold text-white">Ready to build a safer workplace?</span>
+            <span className="ml-1.5">We&apos;re just a conversation away.</span>
           </p>
           <a
             href="#contact"
-            className="inline-flex min-h-12 shrink-0 items-center justify-center bg-green px-6 py-3 text-center font-heading text-sm font-bold text-white transition-opacity hover:opacity-85 md:min-h-0 md:py-2.5"
+            className="inline-flex min-h-12 shrink-0 items-center justify-center bg-green px-6 py-3.5 text-center font-heading text-sm font-bold text-white transition-opacity hover:opacity-85 md:min-h-0 md:py-2.5"
           >
             Get a Free Consultation
           </a>
@@ -20,22 +20,18 @@ export function Footer() {
       </div>
 
       <div className="page-shell py-8 sm:py-12">
-        <div className="mb-8 grid grid-cols-2 gap-x-4 gap-y-8 sm:mb-10 sm:gap-10 md:grid-cols-4">
-          <div className="col-span-2 md:col-span-1">
+        <div className="mb-8 grid grid-cols-1 gap-y-7 min-[380px]:grid-cols-2 min-[380px]:gap-x-5 min-[380px]:gap-y-8 sm:mb-10 sm:gap-10 md:grid-cols-4">
+          <div className="min-[380px]:col-span-2 md:col-span-1">
             <a
               href="#"
-              className="mb-3 flex items-center gap-2 sm:mb-4"
-              aria-label="APEX Safety Consultants home"
+              className="mb-2 inline-block sm:mb-1.5"
+              aria-label="APEX Safety Consultancy home"
             >
               <img
-                src={apexIcon}
-                alt=""
-                aria-hidden="true"
-                className="h-9 w-9 shrink-0 object-contain invert sm:h-12 sm:w-12"
+                src={apexFooterLogo}
+                alt="APEX Safety Consultancy"
+                className="h-14 w-auto max-w-full object-contain object-left sm:h-[4.75rem] sm:max-w-[380px] lg:h-20 lg:max-w-[420px]"
               />
-              <span className="relative top-px font-brand text-base font-heavy leading-none tracking-[0.04em] text-white uppercase sm:top-[2px] sm:text-xl lg:text-2xl">
-                APEX SAFETY
-              </span>
             </a>
             <p className="max-w-xs text-xs leading-relaxed text-white/35">
               Independent safety management consultancy. Practitioner-led. Commercially unbiased.
@@ -65,7 +61,7 @@ export function Footer() {
 
         <div className="flex flex-col items-start justify-between gap-3 border-t border-white/[0.07] pt-6 sm:gap-4 sm:pt-8 md:flex-row md:items-center">
           <p className="text-[11px] text-white/20 sm:text-xs">
-            © 2026 APEX Safety Consultants. All rights reserved.
+            © 2026 APEX Safety Consultancy. All rights reserved.
           </p>
           <div className="flex flex-wrap gap-x-5 gap-y-2">
             {['Privacy Policy', 'Terms of Service'].map((l) => (

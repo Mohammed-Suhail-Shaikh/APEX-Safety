@@ -1,4 +1,3 @@
-import apexIcon from '@/assets/apex-icon.png'
 import { ABOUT_VALUES } from '@/data/content'
 import { Reveal } from '@/components/Reveal'
 
@@ -6,7 +5,7 @@ export function About() {
   return (
     <section id="about" className="section-pad border-t border-border bg-surface-alt">
       <div className="page-shell">
-        <div className="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:gap-12">
+        <div className="grid grid-cols-1 gap-9 lg:grid-cols-12 lg:gap-12">
           <Reveal className="lg:col-span-5">
             <p className="mb-3 font-heading text-xs font-bold tracking-widest text-label uppercase">
               About APEX
@@ -18,7 +17,7 @@ export function About() {
             </h2>
             <div className="space-y-4 text-[15px] leading-[1.7] text-body sm:space-y-5 sm:text-base sm:leading-[1.8]">
               <p>
-                APEX Safety Consultants is a newly established consultancy, but our consultants are
+                APEX Safety Consultancy is a newly established consultancy, but our consultants are
                 not new to safety. We bring hands-on EHS field experience from years of working
                 within high-risk industries — now channelled into independent practice.
               </p>
@@ -46,7 +45,7 @@ export function About() {
                   <h4 className="mb-2 font-heading text-sm font-bold text-foreground">
                     {item.title}
                   </h4>
-                  <p className="text-sm leading-[1.65] text-muted-foreground sm:leading-[1.7]">
+                  <p className="text-[13px] leading-[1.65] text-muted-foreground sm:text-sm sm:leading-[1.7]">
                     {item.body}
                   </p>
                 </div>
@@ -54,13 +53,8 @@ export function About() {
             ))}
 
             <Reveal delayMs={240} className="sm:col-span-2">
-              <div className="mt-1 flex flex-col items-start gap-3 border border-green-soft-border bg-green-soft p-4 sm:mt-2 sm:flex-row sm:items-center sm:gap-5 sm:p-6">
-                <img
-                  src={apexIcon}
-                  alt="APEX Safety Consultants"
-                  className="h-9 w-9 shrink-0 object-contain sm:h-12 sm:w-12"
-                />
-                <p className="text-sm leading-[1.65] text-green sm:leading-[1.7]">
+              <div className="mt-1 border border-green-soft-border bg-green-soft p-4 sm:mt-2 sm:p-6">
+                <p className="text-[13px] leading-[1.65] text-green sm:text-sm sm:leading-[1.7]">
                   <strong>Ready to talk?</strong> We offer a no-obligation discovery conversation to
                   understand your situation and tell you honestly whether we can help.{' '}
                   <a href="#contact" className="font-semibold underline underline-offset-2">

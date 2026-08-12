@@ -28,19 +28,19 @@ export function FAQ() {
                 >
                   <button
                     type="button"
-                    className="flex w-full cursor-pointer items-start justify-between gap-3 py-4 text-left sm:items-center sm:gap-6 sm:py-5"
+                    className="flex w-full cursor-pointer items-start justify-between gap-3 py-4.5 text-left sm:items-center sm:gap-6 sm:py-5"
                     onClick={() => setOpen(isOpen ? null : i)}
                     aria-expanded={isOpen}
                   >
                     <span
-                      className={`min-w-0 font-heading text-[15px] font-semibold transition-colors duration-150 sm:text-base ${
+                      className={`min-w-0 font-heading text-[15px] leading-snug font-semibold transition-colors duration-150 sm:text-base sm:leading-normal ${
                         isOpen ? 'text-green' : 'text-foreground'
                       }`}
                     >
                       {faq.q}
                     </span>
                     <span
-                      className={`mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center text-xl text-label transition-transform duration-200 sm:mt-0 sm:h-auto sm:w-auto ${
+                      className={`mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center text-xl text-label transition-transform duration-200 sm:mt-0 sm:h-auto sm:w-auto ${
                         isOpen ? 'rotate-45' : ''
                       }`}
                       aria-hidden="true"

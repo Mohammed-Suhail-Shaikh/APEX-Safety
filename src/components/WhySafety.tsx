@@ -28,13 +28,13 @@ export function WhySafety() {
             guidance that large corporates access, scaled and priced appropriately for organizations
             at every stage.
           </p>
-          <div className="grid grid-cols-2 gap-3 sm:gap-4">
+          <div className="grid grid-cols-1 gap-3 min-[380px]:grid-cols-2 sm:gap-4">
             {STATS.map((item) => (
-              <div key={item.stat} className="border-l-[3px] border-green bg-surface p-3.5 sm:p-5">
-                <div className="mb-1 font-heading text-xl font-bold tracking-[-0.02em] text-green sm:text-2xl">
+              <div key={item.stat} className="border-l-[3px] border-green bg-surface p-4 sm:p-5">
+                <div className="mb-1.5 font-heading text-2xl font-bold tracking-[-0.02em] text-green sm:text-2xl">
                   {item.stat}
                 </div>
-                <div className="text-[11px] leading-snug text-body sm:text-xs">{item.label}</div>
+                <div className="text-xs leading-snug text-body sm:text-xs">{item.label}</div>
               </div>
             ))}
           </div>

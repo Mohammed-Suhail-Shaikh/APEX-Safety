@@ -1,6 +1,6 @@
-# APEX Safety Consultants
+# APEX Safety Consultancy
 
-Landing page for APEX Safety Consultants.
+Landing page for APEX Safety Consultancy.
 
 ## Setup
 

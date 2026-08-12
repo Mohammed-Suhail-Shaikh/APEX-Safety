@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import apexIcon from '@/assets/apex-icon.png'
+import apexNavLogo from '@/assets/apex-nav-logo.png'
 import { NAV_LINKS } from '@/data/content'
 import { useScrollY } from '@/hooks/useScrollY'
 
@@ -45,22 +45,18 @@ export function Nav() {
         scrolled ? 'shadow-[0_1px_12px_rgba(0,0,0,0.06)]' : ''
       }`}
     >
-      <div className="flex h-14 w-full items-center justify-between gap-2 px-3 sm:h-16 sm:gap-3 sm:px-8 lg:px-14">
+      <div className="flex h-14 w-full items-center justify-between gap-3 px-3.5 sm:h-16 sm:gap-3 sm:px-8 lg:px-14">
         <a
           href="#"
-          className="relative z-10 flex min-w-0 flex-1 items-center gap-1.5 sm:gap-2.5"
-          aria-label="APEX Safety Consultants home"
+          className="relative z-10 flex min-w-0 flex-1 items-center"
+          aria-label="APEX Safety Consultancy home"
           onClick={() => setOpen(false)}
         >
           <img
-            src={apexIcon}
-            alt=""
-            aria-hidden="true"
-            className="h-8 w-8 shrink-0 object-contain sm:h-11 sm:w-11 lg:h-13 lg:w-13"
+            src={apexNavLogo}
+            alt="APEX Safety Consultancy"
+            className="h-10 w-auto max-w-[min(260px,calc(100vw-5.75rem))] object-contain object-left sm:max-w-[300px] lg:h-12"
           />
-          <span className="relative top-px truncate font-brand text-[15px] font-heavy leading-none tracking-[0.03em] text-foreground uppercase sm:top-[4px] sm:text-2xl sm:tracking-[0.04em] lg:text-3xl">
-            APEX SAFETY
-          </span>
         </a>
 
         <nav className="hidden items-center gap-7 lg:flex" aria-label="Primary">
@@ -111,12 +107,12 @@ export function Nav() {
             : 'max-h-0 overflow-hidden opacity-0'
         }`}
       >
-        <div className="flex max-h-[min(32rem,calc(100dvh-3.5rem-env(safe-area-inset-top)))] flex-col overflow-y-auto px-4 py-2 pb-[max(0.75rem,env(safe-area-inset-bottom))]">
+        <div className="flex flex-col px-4 py-2 pb-[max(0.75rem,env(safe-area-inset-bottom))]">
           {NAV_LINKS.map(({ label, href }) => (
             <a
               key={label}
               href={href}
-              className={`border-b border-border/60 py-3.5 text-base font-medium last:border-b-0 ${
+              className={`border-b border-border/60 py-4 text-base font-medium last:border-b-0 ${
                 active === href ? 'text-green' : 'text-body'
               }`}
               onClick={() => setOpen(false)}
@@ -126,7 +122,7 @@ export function Nav() {
           ))}
           <a
             href="#contact"
-            className="mt-3 mb-1 w-full bg-green px-5 py-3.5 text-center font-heading text-sm font-semibold text-white"
+            className="mt-3 mb-1 min-h-12 w-full bg-green px-5 py-3.5 text-center font-heading text-sm font-semibold text-white"
             onClick={() => setOpen(false)}
           >
             Contact Us

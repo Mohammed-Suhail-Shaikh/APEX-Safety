@@ -167,27 +167,22 @@ h5 {
     transform: none;
     transition: none;
   }
+}
 
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-
-  img.h-full {
-    height: 100%;
-  }
+img {
+  max-width: 100%;
 }
 
 .page-shell {
   width: 100%;
   max-width: 80rem;
   margin-inline: auto;
-  padding-inline: 1rem;
+  padding-inline: 1.125rem;
 }
 
 @media (min-width: 640px) {
   .page-shell {
-    padding-inline: 1.25rem;
+    padding-inline: 1.5rem;
   }
 }
 
@@ -198,7 +193,7 @@ h5 {
 }
 
 .section-pad {
-  padding-block: 3rem;
+  padding-block: 2.75rem;
 }
 
 @media (min-width: 640px) {
