@@ -69,11 +69,19 @@ export function Footer() {
             <span className="font-heading text-[11px] font-semibold tracking-[0.08em] text-white/40 uppercase sm:text-sm">
               Subsidiary of
             </span>
-            <img
-              src={eymenLogo}
-              alt="Eymen Groups"
-              className="h-10 w-auto max-w-[min(180px,46vw)] object-contain sm:h-14 sm:max-w-none"
-            />
+            <a
+              href="https://www.eymengroups.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Eymen Groups website"
+              className="inline-flex shrink-0 transition-opacity hover:opacity-85"
+            >
+              <img
+                src={eymenLogo}
+                alt="Eymen Groups"
+                className="h-10 w-auto max-w-[min(180px,46vw)] object-contain sm:h-14 sm:max-w-none"
+              />
+            </a>
             <span className="font-heading text-[11px] font-semibold tracking-[0.08em] text-white/40 uppercase sm:text-sm">
               Groups
             </span>
