@@ -6,22 +6,22 @@ export function Footer() {
   return (
     <footer className="bg-foreground pb-[env(safe-area-inset-bottom)]">
       <div className="border-b border-white/[0.07]">
-        <div className="page-shell flex flex-col items-stretch justify-between gap-3.5 py-5 sm:gap-5 sm:py-8 md:flex-row md:items-center">
+        <div className="page-shell flex flex-col items-stretch justify-between gap-3 py-4 sm:gap-5 sm:py-8 md:flex-row md:items-center">
           <p className="text-[13px] leading-relaxed text-white/55 sm:text-sm">
             <span className="font-semibold text-white">Ready to build a safer workplace?</span>
             <span className="ml-1.5">We&apos;re just a conversation away.</span>
           </p>
           <a
             href="#contact"
-            className="inline-flex min-h-12 shrink-0 items-center justify-center bg-green px-6 py-3.5 text-center font-heading text-sm font-bold text-white transition-opacity hover:opacity-85 md:min-h-0 md:py-2.5"
+            className="btn-primary inline-flex min-h-12 shrink-0 items-center justify-center bg-green px-6 py-3.5 text-center font-heading text-sm font-bold text-white md:min-h-0 md:py-2.5"
           >
             Get a Free Consultation
           </a>
         </div>
       </div>
 
-      <div className="page-shell py-8 sm:py-12">
-        <div className="mb-8 grid grid-cols-1 gap-y-7 min-[380px]:grid-cols-2 min-[380px]:gap-x-5 min-[380px]:gap-y-8 sm:mb-10 sm:gap-10 md:grid-cols-4">
+      <div className="page-shell py-6 sm:py-12">
+        <div className="mb-6 grid grid-cols-1 gap-y-5 min-[380px]:grid-cols-2 min-[380px]:gap-x-5 min-[380px]:gap-y-7 sm:mb-10 sm:gap-10 md:grid-cols-4">
           <div className="min-[380px]:col-span-2 md:col-span-1">
             <a
               href="#"
@@ -31,7 +31,7 @@ export function Footer() {
               <img
                 src={apexFooterLogo}
                 alt="APEX Safety Consultancy"
-                className="h-14 w-auto max-w-full object-contain object-left sm:h-[4.75rem] sm:max-w-[380px] lg:h-20 lg:max-w-[420px]"
+                className="h-12 w-auto max-w-full object-contain object-left sm:h-[4.75rem] sm:max-w-[380px] lg:h-20 lg:max-w-[420px]"
               />
             </a>
             <p className="max-w-xs text-xs leading-relaxed text-white/35">
@@ -41,7 +41,7 @@ export function Footer() {
 
           {FOOTER_COLUMNS.map((col) => (
             <div key={col.heading}>
-              <h4 className="mb-3 font-heading text-[11px] font-bold tracking-widest text-white/30 uppercase sm:mb-4 sm:text-xs">
+              <h4 className="mb-3 font-heading text-[11px] font-bold tracking-widest text-white uppercase sm:mb-4 sm:text-xs">
                 {col.heading}
               </h4>
               <ul className="flex flex-col gap-2 sm:gap-2.5">
@@ -60,7 +60,7 @@ export function Footer() {
           ))}
         </div>
 
-        <div className="flex flex-col items-center gap-5 border-t border-white/[0.07] pt-7 text-center sm:gap-6 sm:pt-8 md:grid md:grid-cols-3 md:items-center md:gap-5 md:text-left">
+        <div className="flex flex-col items-center gap-4 border-t border-white/[0.07] pt-5 text-center sm:gap-6 sm:pt-8 md:grid md:grid-cols-3 md:items-center md:gap-5 md:text-left">
           <p className="order-2 text-[11px] text-white/20 md:order-1 md:justify-self-start sm:text-xs">
             © 2026 APEX Safety Consultancy. All rights reserved.
           </p>

@@ -12,7 +12,7 @@ export function FAQ() {
           <p className="mb-3 font-heading text-xs font-bold tracking-widest text-label uppercase">
             FAQs
           </p>
-          <h2 className="mb-7 text-[1.65rem] font-bold tracking-[-0.02em] text-foreground sm:mb-10 sm:text-3xl lg:text-4xl">
+          <h2 className="mb-4 text-[1.55rem] font-bold tracking-[-0.02em] text-foreground sm:mb-10 sm:text-3xl lg:text-4xl">
             Questions? We have answers.
           </h2>
         </Reveal>
@@ -28,7 +28,7 @@ export function FAQ() {
                 >
                   <button
                     type="button"
-                    className="flex w-full cursor-pointer items-start justify-between gap-3 py-4.5 text-left sm:items-center sm:gap-6 sm:py-5"
+                    className="flex w-full cursor-pointer items-start justify-between gap-3 py-3.5 text-left sm:items-center sm:gap-6 sm:py-5"
                     onClick={() => setOpen(isOpen ? null : i)}
                     aria-expanded={isOpen}
                   >
@@ -54,7 +54,7 @@ export function FAQ() {
                     }`}
                   >
                     <div className="overflow-hidden">
-                      <p className="pb-4 text-sm leading-[1.75] text-body sm:pb-5 sm:leading-[1.8]">
+                      <p className="pb-3.5 text-[13px] leading-[1.65] text-body sm:pb-5 sm:text-sm sm:leading-[1.8]">
                         {faq.a}
                       </p>
                     </div>

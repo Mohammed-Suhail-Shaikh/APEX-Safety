@@ -67,7 +67,7 @@ export function Nav() {
           ))}
           <a
             href="#contact"
-            className="bg-green px-5 py-2 font-heading text-sm font-semibold text-white transition-opacity hover:opacity-85"
+            className="btn-primary bg-green px-5 py-2 font-heading text-sm font-semibold text-white"
           >
             Contact Us
           </a>
@@ -122,7 +122,7 @@ export function Nav() {
           ))}
           <a
             href="#contact"
-            className="mt-3 mb-1 min-h-12 w-full bg-green px-5 py-3.5 text-center font-heading text-sm font-semibold text-white"
+            className="btn-primary mt-3 mb-1 min-h-12 w-full bg-green px-5 py-3.5 text-center font-heading text-sm font-semibold text-white"
             onClick={() => setOpen(false)}
           >
             Contact Us

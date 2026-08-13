@@ -26,13 +26,16 @@ export const SERVICES_LIST = [
   'Safety Management Systems (ISO 45001)',
   'On-Site Safety Auditing',
   'Incident Investigation & RCA',
+  '(ISO 14001) Consulting',
   'Emergency Response Planning',
   'Construction Safety',
+  'Electrical Safety',
   'Safety Training & Competency',
   'Regulatory Compliance (OSHA/EPA)',
   'Process Safety Management',
   'Contractor Safety Management',
   'Occupational Health & Hygiene',
+  'ESG and EHS Advisory Services',
   'Safety Culture Development',
 ] as const
 
@@ -156,7 +159,7 @@ export const FAQS = [
   },
 ] as const
 
-export const CONTACT_EMAIL = 'info@apexsafetyconsultants.com'
+export const CONTACT_EMAIL = 'sales@apexsafetyconsultancy.com'
 
 /**
  * Regional phone numbers shown under Contact → Phone.
@@ -164,7 +167,7 @@ export const CONTACT_EMAIL = 'info@apexsafetyconsultants.com'
  * { country: 'United States', number: '+1 …', href: 'tel:+1…' }
  */
 export const CONTACT_PHONES = [
-  { country: 'India', number: '+91 00000 00000', href: 'tel:+910000000000' },
+  { country: 'India', number: '+91 8652577266', href: 'tel:+918652577266' },
 ] as const
 
 export const FOOTER_COLUMNS = [
@@ -191,8 +194,11 @@ export const FOOTER_COLUMNS = [
   {
     heading: 'Contact',
     links: [
-      { label: 'info@apexsafetyconsultants.com', href: 'mailto:info@apexsafetyconsultants.com' },
-      { label: 'India: +91 00000 00000', href: 'tel:+910000000000' },
+      {
+        label: 'sales@apexsafetyconsultancy.com',
+        href: 'mailto:sales@apexsafetyconsultancy.com',
+      },
+      { label: 'India: +91 8652577266', href: 'tel:+918652577266' },
       { label: 'Mon–Fri, 8am–6pm', href: '#contact' },
     ],
   },

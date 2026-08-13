@@ -158,6 +158,71 @@ h5 {
     transform: none;
     transition: none;
   }
+
+  .btn-primary,
+  .btn-outline,
+  .btn-inverse {
+    transition: none;
+  }
+
+  .btn-primary:hover,
+  .btn-outline:hover,
+  .btn-inverse:hover,
+  .btn-primary:active,
+  .btn-outline:active,
+  .btn-inverse:active {
+    transform: none;
+  }
+}
+
+/* Shared button hover motion */
+.btn-primary,
+.btn-outline,
+.btn-inverse {
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    box-shadow 0.2s ease;
+  will-change: transform;
+}
+
+.btn-primary:hover {
+  opacity: 0.92;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.btn-primary:active {
+  opacity: 0.88;
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+.btn-outline:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.85);
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.btn-outline:active {
+  transform: translateY(0);
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.btn-inverse:hover {
+  opacity: 0.92;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.14);
+}
+
+.btn-inverse:active {
+  opacity: 0.88;
+  transform: translateY(0);
+  box-shadow: none;
 }
 
 /* Mobile: never leave reveal content invisible / sparse */
@@ -193,7 +258,7 @@ img {
 }
 
 .section-pad {
-  padding-block: 2.75rem;
+  padding-block: 2rem;
 }
 
 @media (min-width: 640px) {

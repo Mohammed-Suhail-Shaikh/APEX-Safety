@@ -19,7 +19,7 @@ function FormInput({
   disabled?: boolean
 }) {
   return (
-    <div className="flex flex-col gap-0.5 sm:gap-1">
+    <div className="flex min-w-0 flex-col gap-0.5 sm:gap-1">
       <label htmlFor={name} className="text-[11px] font-semibold text-[#374151] sm:text-xs">
         {label}
         {required ? <span className="text-green"> *</span> : null}
@@ -31,7 +31,7 @@ function FormInput({
         placeholder={placeholder}
         required={required}
         disabled={disabled}
-        className="w-full border border-[#D1D5DB] px-2.5 py-2.5 font-body text-base leading-normal text-[#374151] outline-none transition-colors focus:border-green disabled:cursor-not-allowed disabled:bg-surface sm:px-3 sm:py-2.5 sm:text-sm"
+        className="w-full border border-[#D1D5DB] px-2.5 py-2 font-body text-base leading-normal text-[#374151] outline-none transition-colors focus:border-green disabled:cursor-not-allowed disabled:bg-surface sm:px-3 sm:py-2.5 sm:text-sm"
       />
     </div>
   )
@@ -79,24 +79,24 @@ export function Contact() {
 
   return (
     <section id="contact" className="section-pad border-t border-border bg-surface-alt">
-      <div className="page-shell grid grid-cols-1 items-start gap-7 sm:gap-10 lg:grid-cols-2 lg:gap-16">
+      <div className="page-shell grid grid-cols-1 items-start gap-5 sm:gap-10 lg:grid-cols-2 lg:gap-16">
         <Reveal>
-          <p className="mb-2.5 font-heading text-xs font-bold tracking-widest text-label uppercase sm:mb-3">
+          <p className="mb-2 font-heading text-xs font-bold tracking-widest text-label uppercase sm:mb-3">
             Get In Touch
           </p>
-          <h2 className="mb-3 text-[1.5rem] leading-[1.2] font-bold tracking-[-0.02em] text-foreground sm:mb-6 sm:text-3xl sm:leading-[1.15] lg:text-4xl">
+          <h2 className="mb-2.5 text-[1.45rem] leading-[1.2] font-bold tracking-[-0.02em] text-foreground sm:mb-6 sm:text-3xl sm:leading-[1.15] lg:text-4xl">
             Let&apos;s talk about your workplace safety.
           </h2>
-          <p className="mb-5 text-[14px] leading-[1.65] text-body sm:mb-8 sm:text-base sm:leading-[1.8]">
+          <p className="mb-4 text-[13px] leading-[1.6] text-body sm:mb-8 sm:text-base sm:leading-[1.8]">
             Fill in the form and we&apos;ll get back to you within one business day. No sales pitch
             — just an honest conversation about whether and how we can help.
           </p>
 
-          <div className="flex flex-col gap-4 sm:gap-5">
+          <div className="mb-1 grid grid-cols-1 gap-3 border border-border bg-white p-3.5 sm:mb-0 sm:grid-cols-1 sm:gap-5 sm:border-0 sm:bg-transparent sm:p-0">
             <div className="flex items-start gap-3 sm:gap-4">
-              <div className="mt-1 h-7 w-0.5 shrink-0 bg-green sm:h-8" aria-hidden="true" />
+              <div className="mt-1 h-6 w-0.5 shrink-0 bg-green sm:h-8" aria-hidden="true" />
               <div className="min-w-0">
-                <div className="mb-0.5 font-heading text-[11px] font-bold tracking-widest text-green uppercase sm:text-xs">
+                <div className="mb-0.5 font-heading text-[10px] font-bold tracking-widest text-green uppercase sm:text-xs">
                   Email
                 </div>
                 <a
@@ -108,16 +108,16 @@ export function Contact() {
               </div>
             </div>
 
-            <div className="flex items-start gap-3 sm:gap-4">
-              <div className="mt-1 h-7 w-0.5 shrink-0 bg-green sm:h-8" aria-hidden="true" />
-              <div>
-                <div className="mb-1.5 font-heading text-[11px] font-bold tracking-widest text-green uppercase sm:mb-2 sm:text-xs">
+            <div className="flex items-start gap-3 border-t border-border pt-3 sm:gap-4 sm:border-t-0 sm:pt-0">
+              <div className="mt-1 h-6 w-0.5 shrink-0 bg-green sm:h-8" aria-hidden="true" />
+              <div className="min-w-0">
+                <div className="mb-1 font-heading text-[10px] font-bold tracking-widest text-green uppercase sm:mb-2 sm:text-xs">
                   Phone
                 </div>
-                <ul className="flex flex-col gap-1 sm:gap-1.5">
+                <ul className="flex flex-col gap-0.5 sm:gap-1.5">
                   {CONTACT_PHONES.map((phone) => (
                     <li key={phone.country} className="text-[13px] text-[#374151] sm:text-sm">
-                      <span className="font-heading text-[11px] font-bold tracking-widest text-label uppercase sm:text-xs">
+                      <span className="font-heading text-[10px] font-bold tracking-widest text-label uppercase sm:text-xs">
                         {phone.country}:
                       </span>{' '}
                       <a
@@ -148,7 +148,7 @@ export function Contact() {
               </p>
               <button
                 type="button"
-                className="w-full bg-green px-4 py-2.5 font-heading text-sm font-semibold text-white transition-opacity hover:opacity-85 sm:w-auto sm:px-5"
+                className="btn-primary w-full bg-green px-4 py-2.5 font-heading text-sm font-semibold text-white sm:w-auto sm:px-5"
                 onClick={() => setStatus('idle')}
               >
                 Send another message
@@ -156,14 +156,14 @@ export function Contact() {
             </div>
           ) : (
             <form
-              className="relative flex w-full min-w-0 flex-col gap-3 border border-border bg-white p-4 sm:gap-4 sm:p-8"
+              className="relative flex w-full min-w-0 flex-col gap-2.5 border border-border bg-white p-3.5 sm:gap-4 sm:p-8"
               onSubmit={onSubmit}
             >
-              <p className="font-heading text-[11px] font-bold tracking-widest text-green uppercase sm:mb-2 sm:text-xs">
+              <p className="mb-0.5 font-heading text-[11px] font-bold tracking-widest text-green uppercase sm:mb-2 sm:text-xs">
                 Free Consultation Request
               </p>
 
-              <div className="grid grid-cols-1 gap-2.5 min-[420px]:grid-cols-2 sm:gap-4">
+              <div className="grid grid-cols-2 gap-2.5 sm:gap-4">
                 <FormInput
                   label="First Name"
                   name="firstName"
@@ -179,6 +179,7 @@ export function Contact() {
                   disabled={busy}
                 />
               </div>
+
               <FormInput
                 label="Work Email"
                 name="email"
@@ -187,19 +188,22 @@ export function Contact() {
                 required
                 disabled={busy}
               />
-              <FormInput
-                label="Organization"
-                name="organization"
-                placeholder="Company name"
-                required
-                disabled={busy}
-              />
-              <FormInput
-                label="Industry / Sector"
-                name="industry"
-                placeholder="e.g. Construction"
-                disabled={busy}
-              />
+
+              <div className="grid grid-cols-1 gap-2.5 min-[380px]:grid-cols-2 sm:gap-4">
+                <FormInput
+                  label="Organization"
+                  name="organization"
+                  placeholder="Company name"
+                  required
+                  disabled={busy}
+                />
+                <FormInput
+                  label="Industry / Sector"
+                  name="industry"
+                  placeholder="e.g. Construction"
+                  disabled={busy}
+                />
+              </div>
 
               <div className="flex flex-col gap-0.5 sm:gap-1">
                 <label
@@ -211,10 +215,10 @@ export function Contact() {
                 <textarea
                   id="challenge"
                   name="challenge"
-                  rows={3}
+                  rows={2}
                   placeholder="Briefly describe what you're dealing with..."
                   disabled={busy}
-                  className="w-full resize-none border border-[#D1D5DB] px-2.5 py-2.5 font-body text-base leading-normal text-[#374151] outline-none transition-colors focus:border-green disabled:cursor-not-allowed disabled:bg-surface sm:px-3 sm:py-2.5 sm:text-sm"
+                  className="w-full resize-none border border-[#D1D5DB] px-2.5 py-2 font-body text-base leading-normal text-[#374151] outline-none transition-colors focus:border-green disabled:cursor-not-allowed disabled:bg-surface sm:min-h-[5.5rem] sm:px-3 sm:py-2.5 sm:text-sm"
                 />
               </div>
 
@@ -241,11 +245,11 @@ export function Contact() {
               <button
                 type="submit"
                 disabled={busy}
-                className="mt-0.5 min-h-12 w-full bg-green py-3.5 font-heading text-[13px] font-bold tracking-[0.04em] text-white transition-opacity hover:opacity-85 disabled:cursor-not-allowed disabled:opacity-60 sm:mt-1 sm:min-h-0 sm:py-3.5 sm:text-sm"
+                className="btn-primary mt-0.5 min-h-11 w-full bg-green py-3 font-heading text-[13px] font-bold tracking-[0.04em] text-white disabled:cursor-not-allowed disabled:opacity-60 disabled:hover:translate-y-0 disabled:hover:opacity-60 disabled:hover:shadow-none sm:mt-1 sm:min-h-0 sm:py-3.5 sm:text-sm"
               >
                 {busy ? 'SENDING…' : 'SEND MESSAGE'}
               </button>
-              <p className="text-center text-[11px] text-label sm:text-xs">
+              <p className="text-center text-[10px] text-label sm:text-xs">
                 No commitment. Completely confidential.
               </p>
             </form>
